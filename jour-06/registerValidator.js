@@ -13,17 +13,31 @@ function pass() {
     var indexcar = Math.floor((maxcar - mincar) + mincar)
 
     var index3 = index, index1, indexcar;
-    //for (var i =0 ;i<=num ;i++) {
+    console.log(index3)
+    //for (var i = 0; i <= num; i++) {
 
-    if (index && index1 && indexcar) {
+        if (index && index1 && indexcar) {
 
-password=password+
-       // password = password + String.fromCharCode(index3);
-        console.log("ok")
+            password =
+                 password + String.fromCharCode(index3);
+            //console.log("ok")
 
 
-    }//}
-    if ((index3 !== index) && (index3 !== index1) && (index3 !== indexcar)) {
-        console.log("error")
-    }
-} console.log(pass())
+        }
+        if ((index3 !== index) && (index3 !== index1) && (index3 !== indexcar)) {
+            //console.log("error")
+        }
+    //}
+    
+}
+
+pass()
+
+
+//var array= ['1','2','3']
+//array.push('4');
+
+//console.log(array[0])
+//console.log(array[1])
+//console.log(array[2])
+///console.log(array[3])
