@@ -6,13 +6,13 @@ function formatDate(date) {
 
     var jj = String(d.getDate());
 
-    var mm = String(d.getMonth() +1);
+    var mm = String(d.getMonth() + 1);
 
     if (mm.length == 1) {
         mm = "0" + mm;
     }
     if (jj.length == 1) {
-        jj= "0" + jj;
+        jj = "0" + jj;
     }
 
 

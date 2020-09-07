@@ -18,18 +18,18 @@
 
 function letterCapitalizeRegex(str) {
 
-function maj(str){
+    function maj(str) {
 
 
-return str.toUpperCase()
-}
-function firste(str){
-    
-    var firstletter = /(^|\s)[a-z]/g;
-    return  str.replace(firstletter,maj);
+        return str.toUpperCase()
+    }
+    function firste(str) {
+
+        var firstletter = /(^|\s)[a-z]/g;
+        return str.replace(firstletter, maj);
 
 
-}
-console.log(firste("Hey tget these words please"))
+    }
+    console.log(firste("Hey tget these words please"))
 }
 letterCapitalizeRegex();

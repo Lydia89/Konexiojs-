@@ -12,12 +12,12 @@
 // version 2  timestamp
 
 function ageCalculator(date) {
-    var d= new Date()
-    
+    var d = new Date()
+
     var aaaa = String(d.getUTCFullYear());
     var timestamp = new Date('January 31, 1989 11:20:00');
 
-    var timestamp = Math.abs(date = new Date(timestamp).getFullYear() -aaaa);
+    var timestamp = Math.abs(date = new Date(timestamp).getFullYear() - aaaa);
     console.log(timestamp)
 }
 ageCalculator()

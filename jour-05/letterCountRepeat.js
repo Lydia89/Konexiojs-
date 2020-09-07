@@ -1,7 +1,7 @@
 
 function letterCountRepeat(str) {
   var mot = '-1';
-  //var letter;
+
   var result = 0;
   var string = str.split(' ')
 

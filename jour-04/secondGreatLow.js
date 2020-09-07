@@ -11,7 +11,6 @@
 
 
 
-
 //var array;
 //for(var i=0; i <= arr.length;i++){
 
@@ -29,11 +28,6 @@
 
 
 //}
-
-
-
-
-
 
 
 
@@ -60,21 +54,21 @@
 
 //console.log(secondGreatLow ());
 
-var array= [1, 42, 42, 180] // [4, 90] // //[7, 7, 12, 98, 106]
-     function secondGreatLow (arr) {
-        // var frist;
-        // var second;
+var array = [1, 42, 42, 180] // [4, 90] // //[7, 7, 12, 98, 106]
+function secondGreatLow(arr) {
+  // var frist;
+  // var second;
 
-    arr.sort(function (a, b) {
-        
-            return a - b;
-          });
-          console.log(arr);
-       
-      first=arr[1];
- 
-    second= arr[arr.length-2]
-    console.log(first + ' ' + second);
+  arr.sort(function (a, b) {
+
+    return a - b;
+  });
+  console.log(arr);
+
+  first = arr[1];
+
+  second = arr[arr.length - 2]
+  console.log(first + ' ' + second);
 
 }
 

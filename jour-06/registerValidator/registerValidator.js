@@ -83,7 +83,7 @@ var properties = [
     {
         name: 'username',
         // validator:  /^[a-zA-Z\s\-]+$/,
-        pass1 : /^[a-z0-9-]+$/gi,
+        pass1: /^[a-z0-9-]+$/gi,
         warning: 'Username must be only letters, spaces, or dashes'
 
 
@@ -110,30 +110,34 @@ prompt.start();
 
 
 prompt.get(properties, function (err, result) {
-    
-    
-  if (properties[0].pass1 !== false){
+
+
+    if (properties[0].pass1 !== false) {
         console.log('ok')
 
-       
-// console.log(properties[0].pass1 !== true)
 
-  //   console.log(properties[1].pass2 !== true)
-      
-   }
+        // console.log(properties[0].pass1 !== true)
 
-    else if (properties[0].pass1 !== true){
+        //   console.log(properties[1].pass2 !== true)
+
+    }
+
+    else if (properties[0].pass1 !== true) {
+
         console.log('error')
+
+
+
     }
 
 
- // else  //if((properties[0].pass1 === true) || (properties[1].pass2 === true))
- // {  
+    // else  //if((properties[0].pass1 === true) || (properties[1].pass2 === true))
+    // {  
 
-       // console.log('error' ) 
+    // console.log('error' ) 
     //}
 
-     
+
     // return  name.matches(properties.password);
     //console.log('Command-line input received:');
     // console.log('  Username: ' + result.username);

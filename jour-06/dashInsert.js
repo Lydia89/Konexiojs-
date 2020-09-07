@@ -37,6 +37,4 @@ function dashInsert(str) {
 }
 
 
-
-
 console.log(dashInsert(56730));

@@ -1,0 +1,6 @@
+{
+  "url": [
+    "http://www.omdbapi.com/?t=titanic&plot=full&apikey=69764082",
+    "http://www.omdbapi.com/?t=twilight&plot=full&apikey=69764082"
+  ]
+}

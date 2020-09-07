@@ -1,4 +1,4 @@
-var f =require('./getTimePassed')
+var f = require('./getTimePassed')
 
 
 return (f.getTimePassed())

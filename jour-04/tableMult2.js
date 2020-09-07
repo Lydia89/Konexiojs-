@@ -1,22 +1,22 @@
-function tableMult(num){
-    var num= process.argv[2];
+function tableMult(num) {
+    var num = process.argv[2];
 
-    if (num==null){
+    if (num == null) {
         console.log('error')
-         
-    }else{
 
-   for ( var i = 1 ; i <= 10; i++) {
+    } else {
 
-        result = num* i;
-       
-    
-  console.log(num + " * " + i + " = " + result);
-}
+        for (var i = 1; i <= 10; i++) {
+
+            result = num * i;
 
 
-}
-return num
+            console.log(num + " * " + i + " = " + result);
+        }
+
+
+    }
+    return num
 }
 tableMult();
 
