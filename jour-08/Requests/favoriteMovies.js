@@ -1,4 +1,4 @@
-var request = require("request")
+
 //var film=require("./film.json")
 
 //var urls=["http://www.omdbapi.com/?i=tt3896198&apikey=585c254f","http://www.omdbapi.com/?t=la+ligne+verte"]
@@ -135,7 +135,7 @@ function user(options) {
 // console.log(`${user.Title} ${user.Year}`);
 //});
 
-
+/*
 
 var obj = {
     "url": "http://www.omdbapi.com/?t=titanic&plot=full&apikey=69764082",
@@ -143,8 +143,6 @@ var obj = {
     "url": "http://www.omdbapi.com/?t=twilight&plot=full&apikey=69764082",
     "url": "http://www.omdbapi.com/?t=avatar&plot=full&apikey=69764082",
 }
-
-
 
 
 request.get(obj.url, { json: true }, (err, res, body) => {
@@ -222,3 +220,183 @@ request.get(obj.url, { json: true }, (err, res, body) => {
 
     } user()
 });
+*/
+
+
+/* iciiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii
+
+var request = require("request")
+
+
+var urls = [
+    "http://www.omdbapi.com/?t=titanic&plot=full&apikey=69764082",
+    "http://www.omdbapi.com/?t=violetta&plot=full&apikey=69764082",
+    "http://www.omdbapi.com/?t=twilight&plot=full&apikey=69764082",
+    "http://www.omdbapi.com/?t=avatar&plot=full&apikey=69764082",
+]
+
+var nombreDepart = 1;
+var nombreActuel = nombreDepart;
+
+for (var i = 0; i <= urls.length; i++) {
+
+
+    // request.get(urls[i], { json: true }, (err, res, body) => {
+    request.get(urls[i], { json: true } , (err, res, body) =>{
+           
+
+        //var json = JSON.stringify(body);
+      //  var json = JSON.parse(body)
+        // console.log(json)
+
+
+        if (err) {
+            return console.log(err);
+        }
+
+        function user() {
+
+            // for (var i =1; i <= 4; i++) { 
+
+            //  }
+            console.log(nombreActuel++ + ".")
+            console.log("Title :" + " " + body.Title)
+            console.log("Year :" + " " + body.Year)
+            console.log("Genre :" + " " + body.Genre)
+            console.log("Actors :" + " " + body.Actors)
+
+
+
+        } user()
+
+
+
+    })
+
+}
+
+
+
+*/
+
+
+
+
+
+
+
+/*
+
+function httpGet(url, callback) {
+    const options = {
+      url :  url,
+      json : true
+    };
+    request(options,
+      function(err, res, body) {
+        callback(err, body);
+      }
+    );
+}
+
+var urls= [
+    "http://www.omdbapi.com/?t=titanic&plot=full&apikey=69764082",
+    "http://www.omdbapi.com/?t=violetta&plot=full&apikey=69764082",
+    "http://www.omdbapi.com/?t=twilight&plot=full&apikey=69764082"
+];
+
+async.map(urls, httpGet, function (err, res){
+    if (err) return console.log(err);
+    console.log(res);
+});*/
+
+
+
+
+
+
+/*
+
+
+var request = require("request")
+var urls = [
+    "http://www.omdbapi.com/?t=titanic&plot=full&apikey=69764082",
+    "http://www.omdbapi.com/?t=violetta&plot=full&apikey=69764082",
+    "http://www.omdbapi.com/?t=twilight&plot=full&apikey=69764082",
+    "http://www.omdbapi.com/?t=avatar&plot=full&apikey=69764082",
+]
+var nombreDepart = 1;
+var nombreActuel = nombreDepart;
+for (var i = 0; i <= urls.length-1; i++) {
+    // request.get(urls[i], { json: true }, (err, res, body) => {
+    request.get(urls[i], function (err, res, body){
+        //var json = JSON.stringify(body);
+        if (err) {
+            return console.log(err);
+        }
+        var json = JSON.parse(body)
+        
+        //console.log(json)
+        function user() {
+            
+            console.log(nombreActuel++ + ".")
+            console.log("Title :" + " " + json.Title)
+            console.log("Year :" + " " + json.Year)
+            console.log("Genre :" + " " + json.Genre)
+            console.log("Actors :" + " " + json.Actors)
+        } user()
+    })
+}
+*/
+
+var request = require("request")
+var nombreDepart = 1;
+var nombreActuel = nombreDepart;
+
+
+request.get("http://www.omdbapi.com/?t=titanic&plot=full&apikey=69764082", function (err, res, body) {
+    json = JSON.parse(body)
+    console.log(nombreActuel++ + ".")
+    console.log("Title :" + " " + json.Title)
+   console.log("Year :" + " " + json.Year)
+    console.log("Genre :" + " " + json.Genre)
+   console.log("Actors :" + " " + json.Actors)
+
+   // console.log("Title :" + " " + json.Title,"\n","Year :" + " " + json.Year ,"\n","Genre :" + " " + json.Genre)
+
+
+    request.get("http://www.omdbapi.com/?t=violetta&plot=full&apikey=69764082", function (err, res, body) {
+        json = JSON.parse(body)
+        console.log(nombreActuel++ + ".")
+        console.log("Title :" + " " + json.Title)
+        console.log("Year :" + " " + json.Year)
+        console.log("Genre :" + " " + json.Genre)
+        console.log("Actors :" + " " + json.Actors)
+
+        request.get("http://www.omdbapi.com/?t=twilight&plot=full&apikey=69764082", function (err, res, body) {
+
+            json = JSON.parse(body)
+            console.log(nombreActuel++ + ".")
+            console.log("Title :" + " " + json.Title)
+            console.log("Year :" + " " + json.Year)
+            console.log("Genre :" + " " + json.Genre)
+            console.log("Actors :" + " " + json.Actors)
+            request.get("http://www.omdbapi.com/?t=avatar&plot=full&apikey=69764082", function (err, res, body) {
+
+
+                json = JSON.parse(body)
+
+                console.log(nombreActuel++ + ".")
+                console.log("Title :" + " " + json.Title)
+                console.log("Year :" + " " + json.Year)
+                console.log("Genre :" + " " + json.Genre)
+                console.log("Actors :" + " " + json.Actors)
+
+            })
+
+
+        })
+    })
+})
+
+
