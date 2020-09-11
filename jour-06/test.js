@@ -1,4 +1,4 @@
-
+/*
 var min = 0
 var max = 7
 
@@ -10,3 +10,8 @@ for (var i = 0; i <= 5; i++) {
 
 }
 console.log(array)
+*/
+function multiply(a, b){
+    a * b
+}
+multiply(3,5);

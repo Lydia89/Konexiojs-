@@ -12,11 +12,11 @@ function displayPrompt() {
             console.log("scorejoueur " + scorejoueur);
             console.log("Your score is " + scorejoueur + ", bank is " + scorebanque)
         }
-        else if (result.q === 'p' || result.q === 'pass') {
+        else if ((result.q === 'p' || result.q === 'pass')&&(scorejoueur>16)  ){
             console.log("gagne")
             console.log("Your score is " + scorejoueur + ", bank is " + scorebanque)
 
-            if ((scorejoueur > scorebanque) || (scorejoueur < 21)) {
+            if (scorejoueur > scorebanque)  {
                 console.log("le joueur gagne.")
                 console.log("Your score is " + scorejoueur + ", bank is " + scorebanque)
                 return
@@ -27,22 +27,20 @@ function displayPrompt() {
                 console.log("Your score is " + scorejoueur + ", bank is " + scorebanque)
                 return
             }
-            
+            if (scorejoueur === scorebanque) {
+                console.log("le joueur perd.")
+                console.log("Your score is " + scorejoueur + ", bank is " + scorebanque)
+                return
+            }
+    
         }
         
-         if (scorejoueur === scorebanque) {
-            console.log("le joueur perd.")
-            console.log("Your score is " + scorejoueur + ", bank is " + scorebanque)
-            return
-        }
-
-
         if (scorejoueur === 21) {
             console.log("Black Jack et gagne")
             return
         }
         if (scorejoueur > 21) {
-            console.log("tu es perdu")
+            console.log("tu as perdu")
             console.log("Your score is " + scorejoueur + ", bank is " + scorebanque)
             return
         }
